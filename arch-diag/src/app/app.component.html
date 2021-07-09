@@ -1,0 +1,13 @@
+
+<ng-container>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
+                 [fixedInViewport]="fixed" [fixedTopGap]="top"
+                 [fixedBottomGap]="bottom">
+     <app-control-panel></app-control-panel>
+    </mat-sidenav>
+    <mat-sidenav-content class="example-content">
+      <app-diag></app-diag>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>
