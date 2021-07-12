@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'svg[app-aws-cloudwatch]',
@@ -6,13 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aws-cloudwatch.component.css']
 })
 export class AwsCloudwatchComponent implements OnInit {
-
+  @Input() large: boolean = true;
   constructor() {
-    console.log("constructor");
    }
 
   ngOnInit(): void {
-    console.log("init");
   }
 
   onClick(){

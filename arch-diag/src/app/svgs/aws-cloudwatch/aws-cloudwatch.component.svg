@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" (click)= "onClick()"width="220" height="221" stroke="none" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd"><path d="M219.9997 151.3977l-109.9695-14.3L0 151.3977 109.9698 220l110.0299-68.6023z" fill="#b7ca9d"/><path d="M22.0365 149.7344l18.5762 4.9096 43.6781-59.2124-43.6781-59.2122-18.5762 6.3049v107.2101z" fill="#4b612c"/><path d="M106.4184 144.6365l-65.8058 10.2223V36.2194l65.8058 13.0927v95.3244z" fill="#759c3e"/><path d="M77.0669 164.5443l-25.6485-6.7881V11.3487L77.0669 0l76.0044 86.6049-76.0044 77.9394z" fill="#4b612c"/><path d="M164.9698 146.5148l-87.9029 18.2171V0l87.9029 30.2902v116.2246z" fill="#759c3e"/><path d="M109.9698 185.8733L0 151.3977v20.0148L109.9698 220v-34.1267z" fill="#4b612c"/><path d="M220 171.3855L109.9698 220v-34.1267L220 151.3977v19.9878z" fill="#759c3e"/><path d="M189.1007 118.2638h-26.6803l-76.0047 4.5612L110 173.2907l79.1007-55.0269z" fill="#b7ca9d"/><path d="M86.4157 167.0391L110 173.2904l-.0302-48.2122-23.5541-2.2536v44.2145z" fill="#4b612c"/><path d="M189.1007 118.2638l-79.1309 6.8148.0305 48.2121 79.1004-21.0608v-33.9661z" fill="#759c3e"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="101" height="101" *ngIf = "large; else small">
+    <path d="M50 100l50-32-50-6-50 6z" fill="#b7ca9d"/>
+    <path d="M10 19v49l8 2 20-27-20-27z" fill="#4c622c"/>
+    <path d="M48 22v43l-30 5V16z" fill="#759c3f"/>
+    <path d="M69 39L35 75l-12-3V5l12-5z" fill="#4c622c"/>
+    <path d="M75 14v53l-40 8V0z" fill="#759c3f"/>
+    <path d="M50 100V85L0 69v9z" fill="#4c622c"/>
+    <path d="M100 69v9l-50 22V85z" fill="#759c3f"/>
+    <path d="M50 79l36-25H74l-35 2z" fill="#b7ca9d"/>
+    <path d="M39 56v20l11 3V57z" fill="#4c622c"/>
+    <path d="M86 69V54l-36 3v22z" fill="#759c3f"/>
+</svg>
+<ng-template #small>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+    <path d="M50 34l-25-3-25 3 25 16 25-16z" fill="#b7ca9d"/>
+    <path d="M5 34l4 1 10-14L9 8 5 9v25z" fill="#4b612c"/>
+    <path d="M24 33L9 35V8l15 3v22z" fill="#759c3e"/>
+    <path d="M18 37l-6-1V3l6-3 17 20-17 17z" fill="#4b612c"/>
+    <path d="M38 33l-20 4V0l20 7v26z" fill="#759c3e"/>
+    <path d="M25 42L0 34v5l25 11v-8z" fill="#4b612c"/>
+    <path d="M50 39L25 50v-8l25-8v5z" fill="#759c3e"/>
+    <path d="M43 27h-6l-17 1 5 12 18-13z" fill="#b7ca9d"/>
+    <path d="M20 38l5 1V29l-5-1v10z" fill="#4b612c"/>
+    <path d="M43 27l-18 2v11l18-5v-8z" fill="#759c3e"/>
+</svg>
+</ng-template>

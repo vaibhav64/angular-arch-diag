@@ -1,0 +1,4 @@
+<svg style="cursor:pointer;" (click)="cloneRect($event)" app-aws-cloudtrail [large]="large_icon" width="55" height="55"></svg>
+<svg style="cursor:pointer;" (click)="cloneRect($event)" app-aws-cloudwatch [large]="large_icon" width="55" height="55"></svg>
+<svg style="cursor:pointer;" (click)="cloneRect($event)" app-aws-s3-bucket [large]="large_icon" width="55" height="55"></svg>
+<svg style="cursor:pointer;" (click)="cloneRect($event)" app-aws-s3-logbucket [large]="large_icon" width="55" height="55"></svg>

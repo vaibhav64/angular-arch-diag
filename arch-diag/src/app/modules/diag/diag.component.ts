@@ -53,6 +53,10 @@ export class DiagComponent implements OnInit {
     {
       id: 'fourth',
       label: 'AwsS3BucketComponent'
+    },
+    {
+      id: 'fifth',
+      label: 'AwsS3BucketComponent'
     }
   ];
 

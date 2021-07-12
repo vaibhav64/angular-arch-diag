@@ -1,1 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="220" stroke="none" stroke-linecap="round" stroke-linejoin="round" fill="#fff" fill-rule="evenodd"><path d="M28.4746 97.6049l-6.5372.4829L0 97.2828l6.066-27.6072 22.4086 27.9293z" fill="#3c4929"/><path d="M28.4746 123.2806l-6.5372-.4829L0 123.6026l6.066 27.6073 22.4086-27.9293z" fill="#b7ca9d"/><path d="M6.066 124.1391L0 123.6026v25.9438l6.066 1.6634v-27.0707z" fill="#4b612c"/><path d="M28.4746 148.5537L6.066 151.2099v-27.0438l22.4086-.8855v25.2731z" fill="#759c3e"/><path d="M69.5523 125.4002l-18.0212-1.2611-31.5077 1.4487 16.8729 49.3927 32.656-49.5803z" fill="#b7ca9d"/><path d="M6.066 96.7196L0 97.2828V71.3391l6.066-1.6635v27.044z" fill="#4b612c"/><path d="M28.4746 72.3318L6.066 69.6756v27.0171l22.4086.9122V72.3318z" fill="#759c3e"/><path d="M69.5523 95.4852l-18.0212 1.2342-31.5077-1.422 16.8729-49.3122 32.656 49.5z" fill="#3c4929"/><path d="M20.0234 51.2168l16.8729-5.2316v47.7562l-16.8729 1.556V51.2168z" fill="#4b612c"/><path d="M69.5526 52.451l-32.6563-6.4658v47.7562l32.6563 1.7438V52.451z" fill="#759c3e"/><path d="M20.0234 169.2927l16.8729 5.6879V127.144l-16.8729-1.5562v43.7049z" fill="#4b612c"/><path d="M69.5526 168.8365l-32.6563 6.1438v-47.8365L69.5526 125.4v43.4365z" fill="#759c3e"/><path d="M57.7149 200.7365L99.9703 220l99.0286-110L99.9703 0 57.7149 19.2635v181.473z" fill="#4b612c"/><path d="M200 174.444L99.9703 220V0L200 45.5562V174.444z" fill="#759c3e"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" *ngIf = "large; else small">
+    <path d="M14 45h-3H0l3-13 11 13z" fill="#3c4929"/>
+    <path d="M14 56h-3H0l3 13 11-13z" fill="#b7ca9d"/>
+    <path d="M3 56H0v12l3 1V56z" fill="#4b612c"/>
+    <path d="M14 67L3 69V56h11v11z" fill="#759c3e"/>
+    <path d="M35 57l-9-1-16 1 8 22 17-22z" fill="#b7ca9d"/>
+    <path d="M3 44l-3 1V33l3-1v12z" fill="#4b612c"/>
+    <path d="M14 33L3 32v12l11 1V33z" fill="#759c3e"/>
+    <path d="M35 43l-9 1-16-1 8-22 17 22z" fill="#3c4929"/>
+    <path d="M10 23l8-2v22h-8V23z" fill="#4b612c"/>
+    <path d="M34 24l-16-3v22h16V24z" fill="#759c3e"/>
+    <path d="M10 77l8 2V58l-8-1v20z" fill="#4b612c"/>
+    <path d="M34 77l-16 3V58l16-1v20z" fill="#759c3e"/>
+    <path d="M29 91l21 9 50-50L50 0 29 9v82z" fill="#4b612c"/>
+    <path d="M100 79l-50 21V0l50 21v58z" fill="#759c3e"/>
+</svg>
+<ng-template #small>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50">
+    <path d="M7 22H5 0l2-6 5 6z" fill="#3c4929"/>
+    <path d="M7 28H5 0l2 6 5-6z" fill="#b7ca9d"/>
+    <path d="M2 28H0v6h2v-6z" fill="#4b612c"/>
+    <path d="M8 34H2v-6h6v6z" fill="#759c3e"/>
+    <path d="M17 28h-4-8l4 12 8-12z" fill="#b7ca9d"/>
+    <path d="M2 22H0v-6h2v6z" fill="#4b612c"/>
+    <path d="M8 17l-6-1v6h6v-5z" fill="#759c3e"/>
+    <path d="M17 21l-4 1-8-1 4-11 8 11z" fill="#3c4929"/>
+    <path d="M5 11l4-1v11H5V11z" fill="#4b612c"/>
+    <path d="M17 11l-8-1v11h8V11z" fill="#759c3e"/>
+    <path d="M5 39l4 1V29H5v10z" fill="#4b612c"/>
+    <path d="M17 38l-8 1V28h8v10z" fill="#759c3e"/>
+    <path d="M14 46l11 4 24-25L25 0 14 4v42z" fill="#4b612c"/>
+    <path d="M50 40L25 50V0l25 10v30z" fill="#759c3e"/>
+</svg>
+</ng-template>

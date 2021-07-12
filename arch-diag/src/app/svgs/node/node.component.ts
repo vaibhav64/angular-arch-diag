@@ -50,7 +50,7 @@ export class NodeComponent implements OnInit {
     viewContainerRef.clear();
 
     const componentRef = viewContainerRef.createComponent<any>(componentFactory);
-    //componentRef.instance.data = adItem.data;
+    componentRef.instance.large = true;
   } 
 
 }
