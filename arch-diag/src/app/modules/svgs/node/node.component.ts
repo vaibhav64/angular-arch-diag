@@ -1,5 +1,6 @@
 import { Component, ComponentFactoryResolver, Input, OnInit, ViewChild } from '@angular/core';
-import { AdHostDirective } from 'src/app/ad-host.directive';
+import { AdHostDirective } from 'src/app/directives/ad-host.directive';
+import { Inode } from 'src/app/interfaces/node.model';
 import { AwsCloudtrailComponent } from '../aws-cloudtrail/aws-cloudtrail.component';
 import { AwsCloudwatchComponent } from '../aws-cloudwatch/aws-cloudwatch.component';
 import { AwsS3BucketComponent } from '../aws-s3-bucket/aws-s3-bucket.component';
@@ -44,13 +45,14 @@ export class NodeComponent implements OnInit {
 
 
   loadComponent() {    
+    //this.node.id = Math.random().toString();
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.getNodeComponent(this.node));
 
     const viewContainerRef = this.adHost.viewContainerRef;
     viewContainerRef.clear();
 
     const componentRef = viewContainerRef.createComponent<any>(componentFactory);
-    componentRef.instance.large = true;
+    componentRef.instance.large = (this.node as Inode)?.data?.largeImage;
   } 
 
 }

@@ -8,8 +8,7 @@ import { SidebarModule } from './modules/sidebar/sidebar.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    
+    AppComponent,    
   ],
   imports: [
     BrowserModule,

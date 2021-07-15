@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SelectPanelComponent } from './select-panel/select-panel.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
-import { SvgsModule } from 'src/app/svgs/svgs.module';
+import { SvgsModule } from '../svgs/svgs.module';
 
 
 

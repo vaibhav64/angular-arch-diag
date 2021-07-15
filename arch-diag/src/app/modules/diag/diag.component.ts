@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DagreNodesOnlyLayout } from '@swimlane/ngx-graph';
-import { Edge, Layout, Node } from '@swimlane/ngx-graph/lib/models';
+import { Edge, Layout} from '@swimlane/ngx-graph/lib/models';
 import * as shape from 'd3-shape';
+import { Subject } from 'rxjs';
+import { Inode } from 'src/app/interfaces/node.model';
+import { NodeService } from 'src/app/services/node.service';
 
 @Component({
   selector: 'app-diag',
@@ -9,56 +12,27 @@ import * as shape from 'd3-shape';
   styleUrls: ['./diag.component.scss']
 })
 export class DiagComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
   public curve: any = shape.curveStepBefore;
   public selectedId: string = '';
   public layout: Layout = new DagreNodesOnlyLayout();
-  public links: Edge[] = [
-    {
-      id: 'a',
-      source: 'first',
-      target: 'second',
-      label: 'is parent of'
-    },
-    {
-      id: 'b',
-      source: 'first',
-      target: 'third',
-      label: 'custom label'
-    },
-    {
-      id: 'c',
-      source: 'first',
-      target: 'fourth',
-      label: 'custom label'
-    }
-  ];
-  public nodes: Node[] = [
-    {
-      id: 'first',
-      label: 'AwsS3LogbucketComponent'
-    },
-    {
-      id: 'second',
-      label: 'AwsCloudtrailComponent'
-    },
-    {
-      id: 'third',
-      label: 'AwsCloudwatchComponent'
-    },
-    {
-      id: 'fourth',
-      label: 'AwsS3BucketComponent'
-    },
-    {
-      id: 'fifth',
-      label: 'AwsS3BucketComponent'
-    }
-  ];
+  public links: Edge[] = [];
+  public nodes: Inode[] = [];
+  update$: Subject<boolean> = new Subject();
+
+  constructor(private nodeService: NodeService) {
+      this.nodeService.nodeState$.subscribe(data => {
+        data.map(d=> {
+          if(d.data) d.data.largeImage = true;
+        })
+        this.nodes = data;
+        this.update$.next(true);
+      })
+   }
+
+  ngOnInit(): void {
+     
+  }
+  
 
   onActivate($event: any): void{
     console.log("on activate event");
