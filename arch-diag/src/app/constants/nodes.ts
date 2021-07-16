@@ -3,16 +3,19 @@ import { Inode } from "../interfaces/node.model";
 export const nodes: Inode[] = [
     {
       id: 'first',
-      label: 'AwsS3LogbucketComponent',
+      label: 'S3Logbucket',
+      component: 'AwsS3LogbucketComponent',
       meta: {
         "inbound": [{
           id: 'second',
-          label: 'AwsCloudtrailComponent',
+          label: 'Cloudtrail',
+          component: 'AwsCloudtrailComponent',
           data: {largeImage:false}
         }],
         "outbound": [{
           id: 'fourth',
-          label: 'AwsS3BucketComponent',
+          label: 'S3Bucket',
+          component: 'AwsS3BucketComponent',
           data: {largeImage:false}
         }]
       },
@@ -20,22 +23,26 @@ export const nodes: Inode[] = [
     },
     {
       id: 'second',
-      label: 'AwsCloudtrailComponent',
+      label: 'Cloudtrail',
+      component: 'AwsCloudtrailComponent',
       data: {largeImage:false}
     },
     {
       id: 'third',
-      label: 'AwsCloudwatchComponent',
+      label: 'Cloudwatch',
+      component: 'AwsCloudwatchComponent',
       data: {largeImage:false}
     },
     {
       id: 'fourth',
-      label: 'AwsS3BucketComponent',
+      label: 'S3Bucket',
+      component: 'AwsS3BucketComponent',
       data: {largeImage:false}
     },
     {
       id: 'fifth',
-      label: 'AwsS3BucketComponent',
+      label: 'S3Bucket',
+      component: 'AwsS3BucketComponent',
       data: {largeImage:false}
     }
   ];

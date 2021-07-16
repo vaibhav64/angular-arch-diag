@@ -6,6 +6,7 @@ export interface Inode extends Node {
     dimension?: NodeDimension;
     transform?: string;
     label?: string;
+    component: string;
     data?: nodeData;
     meta?: nodeMeta;
 }

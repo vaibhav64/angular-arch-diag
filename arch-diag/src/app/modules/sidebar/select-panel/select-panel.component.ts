@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NodeService } from 'src/app/services/node.service';
 
 @Component({
   selector: 'app-select-panel',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select-panel.component.scss']
 })
 export class SelectPanelComponent implements OnInit {
-
-  constructor() { }
+  public show_delete_button: boolean = false;
+  constructor(private nodeService: NodeService) {
+    this.nodeService.single_node_selected$.subscribe(data => {
+      this.show_delete_button = data;
+    })
+   }
 
   ngOnInit(): void {
+  }
+
+  delete($event: any){
+    this.nodeService.deleteNode()
+    this.show_delete_button = false;
   }
 
 }

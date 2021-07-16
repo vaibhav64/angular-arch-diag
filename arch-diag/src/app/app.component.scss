@@ -10,8 +10,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
     width: 300px;
-    background: rgba(41, 192, 129, 0.5);
+    background: rgba(145, 215, 245, 0.534);
   }
 
   .example-content{
@@ -22,5 +23,13 @@
     linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
     background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
     background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  }
+
+  .control-panel{
+    //margin: 10px;
+  }
+
+  .select-panel{
+    //margin: 10px;
   }
   

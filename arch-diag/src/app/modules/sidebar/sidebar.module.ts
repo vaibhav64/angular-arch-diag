@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 import { SelectPanelComponent } from './select-panel/select-panel.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
 import { SvgsModule } from '../svgs/svgs.module';
-
-
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     SelectPanelComponent,
@@ -13,7 +12,9 @@ import { SvgsModule } from '../svgs/svgs.module';
   ],
   imports: [
     CommonModule,
-    SvgsModule
+    SvgsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   exports: [
     SelectPanelComponent,

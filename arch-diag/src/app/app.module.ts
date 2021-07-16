@@ -13,9 +13,9 @@ import { SidebarModule } from './modules/sidebar/sidebar.module';
   imports: [
     BrowserModule,
     DiagModule,
-    BrowserAnimationsModule,
-    MatSidenavModule,
-    SidebarModule
+    BrowserAnimationsModule,    
+    SidebarModule,
+    MatSidenavModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

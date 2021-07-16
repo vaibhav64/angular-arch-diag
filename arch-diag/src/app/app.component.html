@@ -4,7 +4,11 @@
     <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
                  [fixedInViewport]="fixed" [fixedTopGap]="top"
                  [fixedBottomGap]="bottom">
-     <app-control-panel></app-control-panel>
+      <div class = "col">
+        <div class="row control-panel"><app-control-panel></app-control-panel></div> 
+        <div class="row select-panel"><app-select-panel></app-select-panel></div>
+      </div>           
+       
     </mat-sidenav>
     <mat-sidenav-content class="example-content">
       <app-diag></app-diag>

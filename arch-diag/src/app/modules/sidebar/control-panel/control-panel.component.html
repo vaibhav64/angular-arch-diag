@@ -1,0 +1,9 @@
+<ng-container *ngFor="let node of nodes">
+<svg style="cursor:pointer;" (click)="cloneNode(node)" width="90" height="80">
+<svg:g [node]="node" class="node">  
+  </svg:g>
+<svg:text alignment-baseline="central" [attr.x]="0" [attr.y]="60">
+    {{node.label}}
+</svg:text>
+</svg>
+</ng-container>

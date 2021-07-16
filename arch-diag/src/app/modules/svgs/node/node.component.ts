@@ -1,4 +1,4 @@
-import { Component, ComponentFactoryResolver, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ComponentFactory, ComponentFactoryResolver, Input, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { AdHostDirective } from 'src/app/directives/ad-host.directive';
 import { Inode } from 'src/app/interfaces/node.model';
 import { AwsCloudtrailComponent } from '../aws-cloudtrail/aws-cloudtrail.component';
@@ -24,7 +24,7 @@ export class NodeComponent implements OnInit {
   }  
 
   getNodeComponent(node: any): any{
-    switch(node['label']) { 
+    switch(node['component']) { 
       case 'AwsCloudwatchComponent': { 
          return AwsCloudwatchComponent; 
       } 
@@ -45,10 +45,10 @@ export class NodeComponent implements OnInit {
 
 
   loadComponent() {    
-    //this.node.id = Math.random().toString();
+    //this.node.id = Date().toString();
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.getNodeComponent(this.node));
 
-    const viewContainerRef = this.adHost.viewContainerRef;
+    const viewContainerRef = this.adHost?.viewContainerRef;
     viewContainerRef.clear();
 
     const componentRef = viewContainerRef.createComponent<any>(componentFactory);

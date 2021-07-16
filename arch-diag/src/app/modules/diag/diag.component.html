@@ -6,8 +6,6 @@
   [layout]="layout"
   [curve]="curve"
   [update$]="update$"
-  (activate) = "onActivate($event)"
-  (deactivate)="onDeactivate($event)"
   (select)="onSelect($event)"
   (zoomChange)="onZoomChange($event)"
 >
@@ -18,13 +16,16 @@
 </ng-template>
 
 <ng-template #nodeTemplate let-node>
-  <svg:rect *ngIf = "selectedId == node.id"
+  <!-- <svg:rect *ngIf = "selectedId == node.id"
       [attr.width]="node.dimension.width"
       [attr.height]="node.dimension.height"
       [attr.fill]="node.data.color"
-  />
+  /> -->
   <svg:g [node]="node" class="node">  
   </svg:g>
+  <svg:text alignment-baseline="central" [attr.x]="10" [attr.y]="110">
+      {{node.label}}
+</svg:text>
 </ng-template>
 
 <ng-template #linkTemplate let-link>

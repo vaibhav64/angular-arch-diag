@@ -20,31 +20,35 @@ export class DiagComponent implements OnInit {
   update$: Subject<boolean> = new Subject();
 
   constructor(private nodeService: NodeService) {
-      this.nodeService.nodeState$.subscribe(data => {
+      this.nodeService.selected_node_list$.subscribe(data => {
         data.map(d=> {
           if(d.data) d.data.largeImage = true;
         })
         this.nodes = data;
         this.update$.next(true);
+      });
+
+      this.nodeService.selected_edge_list$.subscribe(data => {
+        this.links = data;
+        this.update$.next(true);
       })
+
+      this.nodeService.deselect_node$.subscribe(data => {
+           if(data) this.selectedId = '';
+      });    
    }
 
-  ngOnInit(): void {
-     
+  ngOnInit(): void {     
   }
   
-
-  onActivate($event: any): void{
-    console.log("on activate event");
-  }
-  onDeactivate($event: any): void{
-    console.log("on deactivate event");
-  }
   onZoomChange($event: any): void{
     console.log("on zoom change event");
   }
   onSelect($event: any): void{
-    this.selectedId = $event.id;
+    console.log("on select event"); 
+    this.selectedId = $event.id;   
+    this.nodeService.clickListener($event);
   }
+
 
 }
